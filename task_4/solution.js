@@ -2,7 +2,7 @@
 
 function parseProducts(json) {
     JSON.parse(json); 
-    const data =  JSON.parse(json);
+    let data =  JSON.parse(json);
     let products = data.products;
     return products
 }
@@ -15,7 +15,7 @@ function parseProducts(json) {
 
 function renderProductsCards(json) {
     clearProducts();
-    return parseProducts(json);
+    parseProducts(json);
     products = parseProducts(json);
     length = products.length;
     for (let i = 0; i < length; i += 1) {
